@@ -1,14 +1,12 @@
 package Ultimate_TTT;
 
 
-import net.dv8tion.jda.core.entities.Channel;
-import net.dv8tion.jda.core.entities.MessageActivity;
+import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.MessageChannel;
 import org.apache.commons.lang3.StringUtils;
 
-import javax.security.auth.callback.TextInputCallback;
+import java.awt.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class PlayField {
@@ -17,6 +15,9 @@ public class PlayField {
     Player player2;
     Player active;
     boolean activeGame = false;
+    Message message;
+    Message turn;
+    MessageChannel channel;
 
 
     public PlayField() {
@@ -30,26 +31,30 @@ public class PlayField {
         }
     }
 
-    public void printField(MessageChannel channel) throws InterruptedException {
-        printRow(channel, 0);
-        printRow(channel, 1);
-        printRow(channel, 2);
+    public void printField() {
+        String s = printRow(0) + printRow(1) + printRow(2);
+        System.out.println(s.length());
+        if (message == null) {
+            channel.sendMessage(s).queue();
+        } else {
+            message.editMessage(s).queue();
+        }
     }
 
-    private void printRow(MessageChannel channel, int index) throws InterruptedException {
+    private String printRow(int index) {
+        StringBuilder b = new StringBuilder();
         for (int i = 0; i < 3; i++) {
-            channel.sendMessage(
-                    field.get(index * 3).getRowToString(i, containsActive()) +
-                            Tile.BLACK.toString() +
-                            field.get(index * 3 + 1).getRowToString(i, containsActive()) +
-                            Tile.BLACK.toString() +
-                            field.get(index * 3 + 2).getRowToString(i, containsActive()))
-                    .queue();
-            Thread.sleep(50);
+            b
+                    .append(field.get(index * 3).getRowToString(i, containsActive()))
+                    .append(Tile.BLACK.toString())
+                    .append(field.get(index * 3 + 1).getRowToString(i, containsActive()))
+                    .append(Tile.BLACK.toString())
+                    .append(field.get(index * 3 + 2).getRowToString(i, containsActive())).append("\n");
         }
         if (index != 2) {
-            channel.sendMessage(StringUtils.repeat(Tile.BLACK.toString(), 11)).queue();
+            b.append(StringUtils.repeat(Tile.BLACK.toString(), 11)).append("\n");
         }
+        return b.toString();
     }
 
     public void setPlayer1(Player player1) {
@@ -90,6 +95,7 @@ public class PlayField {
         } else {
             active = player1;
         }
+        turn.editMessage("`Current turn: " + active.getUser().getAsMention()).queue();
     }
 
     public Player getPlayer1() {
@@ -107,5 +113,28 @@ public class PlayField {
         }
         field.get(newActiveTTT - 1).setActive(true);
         System.out.println(field.get(newActiveTTT - 1).isActive());
+    }
+
+    public void setMessage(Message message) {
+        this.message = message;
+    }
+
+    public Message getMessage() {
+        return message;
+    }
+
+    public MessageChannel getChannel() {
+        return channel;
+    }
+    public Message getTurn() {
+        return turn;
+    }
+
+    public void setTurn(Message turn) {
+        this.turn = turn;
+    }
+
+    public void setChannel(MessageChannel channel) {
+        this.channel = channel;
     }
 }

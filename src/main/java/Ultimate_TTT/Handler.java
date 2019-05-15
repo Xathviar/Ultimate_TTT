@@ -1,8 +1,9 @@
 package Ultimate_TTT;
 
 import Ultimate_TTT.commands.Challenge;
+import Ultimate_TTT.commands.GetMessage;
+import Ultimate_TTT.commands.Remove;
 import Ultimate_TTT.commands.TileCommand;
-import Ultimate_TTT.commands.View;
 import Ultimate_TTT.listeners.ReadyListener;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
@@ -29,6 +30,8 @@ public class Handler {
                 .addEventListener(new ReadyListener())
                 .addEventListener(new Challenge(playField, prefix))
                 .addEventListener(new TileCommand(playField, prefix))
+                .addEventListener(new GetMessage(playField, prefix))
+                .addEventListener(new Remove(playField, prefix))
                 .build();
         jda.awaitReady();
     }
