@@ -40,11 +40,19 @@ public enum Tile implements Serializable {
      * @return true - if it can be changed
      */
     public boolean isAvailable() {
-        return this != X && this != O;
+        return this != Tile.X && this != Tile.O;
     }
 
     @Override
     public String toString() {
         return glyph;
+    }
+
+    public String toBlankString () {
+        if (isAvailable()) {
+            return ":white_large_square:";
+        }else {
+            return this.glyph;
+        }
     }
 }

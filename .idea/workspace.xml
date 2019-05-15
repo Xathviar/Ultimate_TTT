@@ -4,7 +4,18 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/Tile.java" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0543c62e-09e7-4513-becd-5e7c2fd29e86" name="Default Changelist" comment="" />
+    <list default="true" id="0543c62e-09e7-4513-becd-5e7c2fd29e86" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/PlayField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/PlayField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/TicTacToe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/Challenge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/Challenge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/TileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/TileCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/View.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,23 +32,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/TicTacToe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="73" column="36" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+            <state relative-caret-position="3024">
+              <caret line="79" column="22" lean-forward="true" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
               <folding>
-                <element signature="e#2298#2299#0" expanded="true" />
-                <element signature="e#2327#2328#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/TileCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3398#3399#0" expanded="true" />
+                <element signature="e#3479#3480#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,41 +45,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/PlayField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+            <state relative-caret-position="582">
+              <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#341#352#0" expanded="true" />
-                <element signature="e#1927#1928#0" expanded="true" />
-                <element signature="e#1965#1966#0" expanded="true" />
-                <element signature="e#2011#2012#0" expanded="true" />
-                <element signature="e#2049#2050#0" expanded="true" />
-                <element signature="e#2102#2103#0" expanded="true" />
-                <element signature="e#2146#2147#0" expanded="true" />
-                <element signature="e#2183#2184#0" expanded="true" />
-                <element signature="e#2216#2217#0" expanded="true" />
+                <element signature="e#1708#1709#0" expanded="true" />
+                <element signature="e#1792#1793#0" expanded="true" />
+                <element signature="e#1889#1890#0" expanded="true" />
+                <element signature="e#1959#1960#0" expanded="true" />
+                <element signature="e#2065#2066#0" expanded="true" />
+                <element signature="e#2184#2185#0" expanded="true" />
+                <element signature="e#2252#2253#0" expanded="true" />
+                <element signature="e#2338#2339#0" expanded="true" />
+                <element signature="e#2570#2571#0" expanded="true" />
+                <element signature="e#2634#2635#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/Challenge.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+            <state relative-caret-position="498">
+              <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -95,20 +87,28 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ie</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/Tile.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/listeners/ReadyListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/MessageListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/View.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/PlayField.java" />
         <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/Handler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/TicTacToe.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/Challenge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/Tile.java" />
         <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/TileCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/Challenge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/View.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/TicTacToe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Ultimate_TTT/PlayField.java" />
       </list>
     </option>
   </component>
@@ -125,12 +125,12 @@
     <option name="width" value="1320" />
     <option name="height" value="961" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,15 +171,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Ultimate_TTT" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ultimate_TTT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ultimate_TTT" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Ultimate_TTT" type="462c0819:PsiDirectoryNode" />
               <item name="listeners" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -187,9 +178,11 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -264,28 +257,29 @@
       <workItem from="1557740770015" duration="2336000" />
       <workItem from="1557812885429" duration="34000" />
       <workItem from="1557829207812" duration="3534000" />
-      <workItem from="1557861317986" duration="1397000" />
+      <workItem from="1557861317986" duration="3889000" />
+      <workItem from="1557904233052" duration="3414000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7301000" />
+    <option name="totallyTimeSpent" value="13207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2880" height="1836" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26183644" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2661406" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32947233" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32924467" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32947233" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.33053583" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -334,21 +328,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/Tile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+        <state relative-caret-position="630">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
           <folding>
-            <element signature="e#929#930#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/Handler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="464">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+          <folding>
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/TileCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1906">
+          <caret line="61" column="25" lean-forward="true" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -357,8 +371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        <state relative-caret-position="-6">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="36" />
           <folding>
             <element signature="e#471#472#0" expanded="true" />
             <element signature="e#505#506#0" expanded="true" />
@@ -366,59 +380,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/TicTacToe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="73" column="36" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
-          <folding>
-            <element signature="e#2298#2299#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/TileCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/commands/Challenge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        <state relative-caret-position="674">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        <state relative-caret-position="3024">
+          <caret line="79" column="22" lean-forward="true" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
+          <folding>
+            <element signature="e#3398#3399#0" expanded="true" />
+            <element signature="e#3479#3480#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Ultimate_TTT/PlayField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+        <state relative-caret-position="582">
+          <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#341#352#0" expanded="true" />
-            <element signature="e#1927#1928#0" expanded="true" />
-            <element signature="e#1965#1966#0" expanded="true" />
-            <element signature="e#2011#2012#0" expanded="true" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2102#2103#0" expanded="true" />
-            <element signature="e#2146#2147#0" expanded="true" />
-            <element signature="e#2183#2184#0" expanded="true" />
-            <element signature="e#2216#2217#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1792#1793#0" expanded="true" />
+            <element signature="e#1889#1890#0" expanded="true" />
+            <element signature="e#1959#1960#0" expanded="true" />
+            <element signature="e#2065#2066#0" expanded="true" />
+            <element signature="e#2184#2185#0" expanded="true" />
+            <element signature="e#2252#2253#0" expanded="true" />
+            <element signature="e#2338#2339#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="e#2634#2635#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -24,7 +24,11 @@ public class View extends ListenerAdapter {
         boolean isBot = author.isBot(); //Determines whether user is a bot or not
 
         if (!isBot && msg.equalsIgnoreCase("sout")) {
-            field.printField(channel);
+            try {
+                field.printField(channel);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             /*
             if (event.isFromType(ChannelType.PRIVATE)) {
                 channel.sendMessage("[PM] " + event.getAuthor().getName() + ": " + msg).queue();

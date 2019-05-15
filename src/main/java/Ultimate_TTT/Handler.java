@@ -1,6 +1,7 @@
 package Ultimate_TTT;
 
 import Ultimate_TTT.commands.Challenge;
+import Ultimate_TTT.commands.TileCommand;
 import Ultimate_TTT.commands.View;
 import Ultimate_TTT.listeners.ReadyListener;
 import net.dv8tion.jda.core.JDA;
@@ -26,8 +27,8 @@ public class Handler {
                 .setAutoReconnect(true)
                 .setAudioEnabled(false)
                 .addEventListener(new ReadyListener())
-                .addEventListener(new View(playField))
                 .addEventListener(new Challenge(playField, prefix))
+                .addEventListener(new TileCommand(playField, prefix))
                 .build();
         jda.awaitReady();
     }

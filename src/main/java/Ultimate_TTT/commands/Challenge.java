@@ -33,8 +33,16 @@ public class Challenge extends ListenerAdapter {
                 } else {
                     field.setPlayer1(new Player(Tile.X, author));
                     field.setPlayer2(new Player(Tile.O, message.getMentionedUsers().get(0)));
+                    field.setActiveGame(true);
+                    field.setActivePlayer(field.getPlayer1());
                     channel.sendMessage("Successfully started the Game.").queue();
-                    field.printField(channel);
+                    try {
+                        field.printField(channel);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    channel.sendMessage("With \'.[1-9]\' you can select the Tic-Tac-Toe you want to play in. If you " +
+                            "selected it you can then select \'.[1-9]\' to place it there.").queue();
                 }
             }else {
                 channel.sendMessage("Please mention someone!").queue();

@@ -76,9 +76,21 @@ public class TicTacToe {
     public int setTile(int index, Player player) {
         if (getField(index - 1).isAvailable()) {
             field[index - 1] = player.getTile();
-            return index - 1;
+            checkVictory(player);
+            return index;
         }
         return -1;
+    }
+
+    private void checkVictory(Player player) {
+        for (int i = 0; i < 3; i++) {
+            if ((field[i * 3] == player.getTile() && field[i * 3 + 1] == player.getTile() && field[i * 3 + 2] == player.getTile()) ||
+                    (field[i] == player.getTile() && field[i + 3] == player.getTile() && field[i + 6] == player.getTile()) ||
+                    (field[0] == player.getTile() && field[4] == player.getTile() && field[8] == player.getTile()) ||
+                    (field[2] == player.getTile() && field[4] == player.getTile() && field[6] == player.getTile())) {
+                winner = player;
+            }
+        }
     }
 
     /**
@@ -91,8 +103,15 @@ public class TicTacToe {
         return new Tile[]{field[index * 3], field[index * 3 + 1], field[index * 3 + 2]};
     }
 
-    public String getRowToString(int index) {
-        return field[index * 3].toString() + field[index * 3 + 1] + field[index * 3 + 2];
+    public String getRowToString(int index, boolean containsActive) {
+        if (containsActive) {
+            if (isActive()) {
+                return field[index * 3].toString() + field[index * 3 + 1].toString() + field[index * 3 + 2].toString();
+            } else {
+                return field[index * 3].toBlankString() + field[index * 3 + 1].toBlankString() + field[index * 3 + 2].toBlankString();
+            }
+        }
+        return field[index * 3].toString() + field[index * 3 + 1].toString() + field[index * 3 + 2].toString();
     }
 
     public boolean isActive() {
@@ -101,5 +120,13 @@ public class TicTacToe {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public void blur() {
+        for (int i = 0; i < field.length; i++) {
+            if (field[i] != Tile.O && field[i] != Tile.X) {
+                field[i] = Tile.WHITE;
+            }
+        }
     }
 }

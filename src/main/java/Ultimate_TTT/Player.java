@@ -14,4 +14,8 @@ public class Player {
     Tile getTile() {
         return tile;
     }
+
+    public User getUser() {
+        return user;
+    }
 }
