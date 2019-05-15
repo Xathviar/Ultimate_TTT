@@ -95,7 +95,9 @@ public class PlayField {
         } else {
             active = player1;
         }
-        turn.editMessage("`Current turn: " + active.getUser().getAsMention()).queue();
+        turn.delete().queue();
+        turn = null;
+        channel.sendMessage("`Current turn: `" + active.getUser().getAsMention()).queue();
     }
 
     public Player getPlayer1() {
