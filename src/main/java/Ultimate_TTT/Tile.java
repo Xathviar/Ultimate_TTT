@@ -14,8 +14,8 @@ public enum Tile implements Serializable {
     SEVEN(":seven:"),
     EIGHT(":eight:"),
     NINE(":nine:"),
-    WHITE(":white_large_square:"),
-    BLACK(":black_large_square:");
+    WHITE(":gear:"),
+    BLACK(":boom:");
 
     private final String glyph;
 
@@ -50,7 +50,7 @@ public enum Tile implements Serializable {
 
     public String toBlankString () {
         if (isAvailable()) {
-            return ":white_large_square:";
+            return Tile.WHITE.getGlyph();
         }else {
             return this.glyph;
         }

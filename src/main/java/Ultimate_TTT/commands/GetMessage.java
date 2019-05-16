@@ -1,18 +1,21 @@
 package Ultimate_TTT.commands;
 
 import Ultimate_TTT.PlayField;
-import net.dv8tion.jda.core.entities.ChannelType;
+import Ultimate_TTT.Player;
+import Ultimate_TTT.Tile;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.MessageChannel;
 import net.dv8tion.jda.core.entities.User;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-public class View extends ListenerAdapter {
+public class GetMessage extends ListenerAdapter {
     PlayField field;
+    char prefix;
 
-    public View(PlayField field) {
+    public GetMessage(PlayField field, char prefix) {
         this.field = field;
+        this.prefix = prefix;
     }
 
     @Override
@@ -23,19 +26,11 @@ public class View extends ListenerAdapter {
         String msg = message.getContentDisplay();       //get msg as String
         boolean isBot = author.isBot(); //Determines whether user is a bot or not
 
-        if (!isBot && msg.equalsIgnoreCase("sout")) {
-                field.printField();
-            /*
-            if (event.isFromType(ChannelType.PRIVATE)) {
-                channel.sendMessage("[PM] " + event.getAuthor().getName() + ": " + msg).queue();
-                System.out.printf("[PM] %s: %s\n", event.getAuthor().getName(),
-                        event.getMessage().getContentDisplay());
-            } else {
-                System.out.printf("[%s][%s] %s: %s\n", event.getGuild().getName(),
-                        event.getTextChannel().getName(), event.getMember().getEffectiveName(),
-                        event.getMessage().getContentDisplay());
-            }
-             */
+        if (isBot && msg.startsWith(":") && field.getMessage() == null) {
+            field.setMessage(message);
+        } else if (isBot && msg.startsWith("`Current turn: ") && field.getTurn() == null) {
+            field.setTurn(message);
         }
     }
+
 }

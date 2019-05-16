@@ -33,7 +33,7 @@ public class TileCommand extends ListenerAdapter {
                 if (field.getActivePlayer().getUser().equals(author)) {
                     Matcher matcher = Pattern.compile(prefix + "([1-9])").matcher(msg);
                     TicTacToe ticTacToe = field.getActive();
-                    while(matcher.find()) {
+                    while (matcher.find()) {
                         int index = Integer.parseInt(matcher.group(1));
                         System.out.println(index);
                         int newActiveTTT = ticTacToe.setTile(index, field.getActivePlayer());
@@ -45,26 +45,16 @@ public class TileCommand extends ListenerAdapter {
                         field.setActiveTTT(newActiveTTT);
                         channel.sendMessage("It is your turn " + field.getActivePlayer().getUser().getAsMention()).queue();
                     }
-                    try {
-                        field.printField(channel);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                } else {
-                    channel.sendMessage("It is not your turn!").queue();
+                    field.printField();
                 }
             } else {
                 if (field.getActivePlayer().getUser().equals(author)) {
                     Matcher matcher = Pattern.compile(prefix + "([1-9])").matcher(msg);
-                    while(matcher.find()) {
+                    while (matcher.find()) {
                         int index = Integer.parseInt(matcher.group(1));
                         field.setActiveTTT(index);
                     }
-                    try {
-                        field.printField(channel);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    field.printField();
                 } else {
                     channel.sendMessage("It is not your turn!").queue();
                 }
