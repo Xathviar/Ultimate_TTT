@@ -43,7 +43,6 @@ public class TileCommand extends ListenerAdapter {
                         }
                         field.setActivePlayer();
                         field.setActiveTTT(newActiveTTT);
-                        channel.sendMessage("It is your turn " + field.getActivePlayer().getUser().getAsMention()).queue();
                     }
                     field.printField();
                 }
