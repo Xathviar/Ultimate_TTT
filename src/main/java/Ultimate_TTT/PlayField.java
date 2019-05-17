@@ -127,6 +127,7 @@ public class PlayField {
     public MessageChannel getChannel() {
         return channel;
     }
+
     public Message getTurn() {
         return turn;
     }
@@ -137,5 +138,29 @@ public class PlayField {
 
     public void setChannel(MessageChannel channel) {
         this.channel = channel;
+    }
+
+    public void checkWinner(MessageChannel channel, Player player) {
+        for (int i = 0; i < 3; i++) {
+            if ((field.get(i * 3).winner != null && field.get(i * 3 + 1).winner != null && field.get(i * 3 + 2).winner != null
+                    && field.get(i * 3).winner.getTile() == player.getTile()
+                    && field.get(i * 3 + 1).winner.getTile() == player.getTile()
+                    && field.get(i * 3 + 2).winner.getTile() == player.getTile()) ||
+                    ( field.get(i).winner != null && field.get(i + 3).winner != null && field.get(i + 6).winner.getTile() != null &&
+                            field.get(i).winner.getTile() == player.getTile()
+                            && field.get(i + 3).winner.getTile() == player.getTile()
+                            && field.get(i + 6).winner.getTile() == player.getTile()) ||
+                    (field.get(0).winner != null && field.get(4).winner != null && field.get(8).winner != null &&
+                               field.get(0).winner.getTile() == player.getTile()
+                            && field.get(4).winner.getTile() == player.getTile()
+                            && field.get(8).winner.getTile() == player.getTile()) ||
+                    (field.get(2).winner != null && field.get(4).winner != null && field.get(6).winner != null &&
+                            field.get(2).winner.getTile() == player.getTile()
+                            && field.get(4).winner.getTile() == player.getTile()
+                            && field.get(6).winner.getTile() == player.getTile())) {
+                channel.sendMessage(player.getUser().getAsMention() + " has won the game!").queue();
+                setActiveGame(false);
+            }
+        }
     }
 }

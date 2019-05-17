@@ -76,21 +76,28 @@ public class TicTacToe {
     public int setTile(int index, Player player) {
         if (getField(index - 1).isAvailable()) {
             field[index - 1] = player.getTile();
-            checkVictory(player);
+            if (checkVictory(player)) {
+                return 0;
+            }
             return index;
         }
         return -1;
     }
 
-    private void checkVictory(Player player) {
+    private boolean checkVictory(Player player) {
         for (int i = 0; i < 3; i++) {
             if ((field[i * 3] == player.getTile() && field[i * 3 + 1] == player.getTile() && field[i * 3 + 2] == player.getTile()) ||
                     (field[i] == player.getTile() && field[i + 3] == player.getTile() && field[i + 6] == player.getTile()) ||
                     (field[0] == player.getTile() && field[4] == player.getTile() && field[8] == player.getTile()) ||
                     (field[2] == player.getTile() && field[4] == player.getTile() && field[6] == player.getTile())) {
                 winner = player;
+                for (int j = 0; j < field.length; j++) {
+                    field[j] = player.getTile();
+                }
+                return true;
             }
         }
+        return false;
     }
 
     /**
@@ -104,6 +111,9 @@ public class TicTacToe {
     }
 
     public String getRowToString(int index, boolean containsActive) {
+        if (winner != null) {
+            return field[index * 3].toString() + field[index * 3 + 1].toString() + field[index * 3 + 2].toString();
+        }
         if (containsActive) {
             if (isActive()) {
                 return field[index * 3].toString() + field[index * 3 + 1].toString() + field[index * 3 + 2].toString();
@@ -122,11 +132,4 @@ public class TicTacToe {
         this.active = active;
     }
 
-    public void blur() {
-        for (int i = 0; i < field.length; i++) {
-            if (field[i] != Tile.O && field[i] != Tile.X) {
-                field[i] = Tile.WHITE;
-            }
-        }
-    }
 }
