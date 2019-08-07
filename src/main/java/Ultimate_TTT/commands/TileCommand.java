@@ -47,6 +47,8 @@ public class TileCommand extends ListenerAdapter {
                         if (newActiveTTT < 0) {
                             channel.sendMessage(field.getActivePlayer().getUser().getAsMention() + " please select a field that hasn't been set!").queue();
                             return;
+                        } else if (newActiveTTT == 0) {
+                            field.checkWinner(channel, field.getActivePlayer());
                         }
                         field.setActivePlayer();
                         field.setActiveTTT(newActiveTTT);
