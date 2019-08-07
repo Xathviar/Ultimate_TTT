@@ -1,6 +1,6 @@
-package Ultimate_TTT.commands;
+package com.github.xathviar.Ultimate_TTT.commands;
 
-import Ultimate_TTT.PlayField;
+import com.github.xathviar.Ultimate_TTT.PlayField;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.User;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;

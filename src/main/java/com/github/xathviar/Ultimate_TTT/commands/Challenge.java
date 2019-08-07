@@ -1,8 +1,8 @@
-package Ultimate_TTT.commands;
+package com.github.xathviar.Ultimate_TTT.commands;
 
-import Ultimate_TTT.PlayField;
-import Ultimate_TTT.Player;
-import Ultimate_TTT.Tile;
+import com.github.xathviar.Ultimate_TTT.PlayField;
+import com.github.xathviar.Ultimate_TTT.Player;
+import com.github.xathviar.Ultimate_TTT.Tile;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.MessageChannel;
 import net.dv8tion.jda.core.entities.User;

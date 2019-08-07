@@ -1,4 +1,4 @@
-package Ultimate_TTT.listeners;
+package com.github.xathviar.Ultimate_TTT.listeners;
 
 import net.dv8tion.jda.core.events.Event;
 import net.dv8tion.jda.core.events.ReadyEvent;

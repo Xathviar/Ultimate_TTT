@@ -1,7 +1,7 @@
-package Ultimate_TTT;
+package com.github.xathviar.Ultimate_TTT;
 
-import Ultimate_TTT.commands.*;
-import Ultimate_TTT.listeners.ReadyListener;
+import com.github.xathviar.Ultimate_TTT.commands.*;
+import com.github.xathviar.Ultimate_TTT.listeners.ReadyListener;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.OnlineStatus;

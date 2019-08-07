@@ -1,4 +1,4 @@
-package Ultimate_TTT;
+package com.github.xathviar.Ultimate_TTT;
 
 import java.io.Serializable;
 
