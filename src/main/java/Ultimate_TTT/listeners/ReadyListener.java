@@ -4,6 +4,9 @@ import net.dv8tion.jda.core.events.Event;
 import net.dv8tion.jda.core.events.ReadyEvent;
 import net.dv8tion.jda.core.hooks.EventListener;
 
+/**
+ * Prints "Bot is ready!" if the bot is connected to discord
+ */
 public class ReadyListener implements EventListener {
 
     public void onEvent(Event event) {

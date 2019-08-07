@@ -29,7 +29,7 @@ public enum Tile implements Serializable {
 
     /**
      * returns the glyph for the Tile
-     * @return
+     * @return String
      */
     public String getGlyph() {
         return glyph;

@@ -1,20 +1,18 @@
 package Ultimate_TTT;
 
-import java.util.Arrays;
-
 public class TicTacToe {
 
-    public Tile[] field = new Tile[9];
-    public static Tile[] tiles = new Tile[13];
+    private Tile[] field = new Tile[9];
+    private static Tile[] tiles = new Tile[13];
 
-    public Player winner;
+    Player winner;
 
     private boolean active = false;
 
     /**
      * Constructor for the 3x3 TTT Field
      */
-    public TicTacToe() {
+    TicTacToe() {
         fillTiles();
         fillField();
     }
@@ -42,18 +40,7 @@ public class TicTacToe {
      * Fills the Field with Values
      */
     private void fillField() {
-        for (int i = 0; i < field.length; i++) {
-            field[i] = tiles[i + 2];
-        }
-    }
-
-    /**
-     * Gets the whole 3x3 Field
-     *
-     * @return Tile[] containing the whole Field
-     */
-    public Tile[] getField() {
-        return field;
+        System.arraycopy(tiles, 2, field, 0, field.length);
     }
 
     /**
@@ -62,7 +49,7 @@ public class TicTacToe {
      * @param x the index of the 3x3 field
      * @return Tile
      */
-    public Tile getField(int x) {
+    private Tile getField(int x) {
         return field[x];
     }
 
@@ -89,21 +76,12 @@ public class TicTacToe {
                     (field[0] == player.getTile() && field[4] == player.getTile() && field[8] == player.getTile()) ||
                     (field[2] == player.getTile() && field[4] == player.getTile() && field[6] == player.getTile())) {
                 winner = player;
+                break;
             }
         }
     }
 
-    /**
-     * Gets one row of the Field
-     *
-     * @param index the index of the row, can be either 0,1 or 2
-     * @return Tile Array containing the Row
-     */
-    public Tile[] getRow(int index) {
-        return new Tile[]{field[index * 3], field[index * 3 + 1], field[index * 3 + 2]};
-    }
-
-    public String getRowToString(int index, boolean containsActive) {
+    String getRowToString(int index, boolean containsActive) {
         if (containsActive) {
             if (isActive()) {
                 return field[index * 3].toString() + field[index * 3 + 1].toString() + field[index * 3 + 2].toString();
@@ -114,19 +92,12 @@ public class TicTacToe {
         return field[index * 3].toString() + field[index * 3 + 1].toString() + field[index * 3 + 2].toString();
     }
 
-    public boolean isActive() {
+    boolean isActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
+    void setActive(boolean active) {
         this.active = active;
     }
 
-    public void blur() {
-        for (int i = 0; i < field.length; i++) {
-            if (field[i] != Tile.O && field[i] != Tile.X) {
-                field[i] = Tile.WHITE;
-            }
-        }
-    }
 }

@@ -5,22 +5,26 @@ import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.MessageChannel;
 import org.apache.commons.lang3.StringUtils;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Handles the TTT Field
+ */
 public class PlayField {
-    List<TicTacToe> field = new ArrayList<>();
-    Player player1;
-    Player player2;
-    Player active;
-    boolean activeGame = false;
-    Message message;
-    Message turn;
-    MessageChannel channel;
+    private List<TicTacToe> field = new ArrayList<>();
+    private Player player1;
+    private Player player2;
+    private Player active;
+    private boolean activeGame = false;
+    private Message message;
+    private Message turn;
+    private MessageChannel channel;
 
-
-    public PlayField() {
+    /**
+     * Constructor for the PlayField
+     */
+    PlayField() {
         fillField();
         active = null;
     }
@@ -33,7 +37,6 @@ public class PlayField {
 
     public void printField() {
         String s = printRow(0) + printRow(1) + printRow(2);
-        System.out.println(s.length());
         if (message == null) {
             channel.sendMessage(s).queue();
         } else {
@@ -78,7 +81,7 @@ public class PlayField {
     }
 
     public TicTacToe getActive() {
-        return field.stream().filter(TicTacToe::isActive).findFirst().get();
+        return field.stream().filter(TicTacToe::isActive).findFirst().orElse(null);
     }
 
     public Player getActivePlayer() {
@@ -104,9 +107,6 @@ public class PlayField {
         return player1;
     }
 
-    public Player getPlayer2() {
-        return player2;
-    }
 
     public void setActiveTTT(int newActiveTTT) {
         field.forEach(n -> n.setActive(false));
@@ -114,7 +114,6 @@ public class PlayField {
             return;
         }
         field.get(newActiveTTT - 1).setActive(true);
-        System.out.println(field.get(newActiveTTT - 1).isActive());
     }
 
     public void setMessage(Message message) {

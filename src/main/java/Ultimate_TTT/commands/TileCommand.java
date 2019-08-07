@@ -11,10 +11,18 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Parses the User-Input to the row and cell in which the player wants to place his 'X' or 'O'
+ */
 public class TileCommand extends ListenerAdapter {
-    PlayField field;
-    char prefix;
+    private final PlayField field;
+    private final char prefix;
 
+    /**
+     * Constructor for TileCommand
+     * @param field the PlayField which will be used
+     * @param prefix the prefix which will be listened to
+     */
     public TileCommand(PlayField field, char prefix) {
         this.field = field;
         this.prefix = prefix;
@@ -35,7 +43,6 @@ public class TileCommand extends ListenerAdapter {
                     TicTacToe ticTacToe = field.getActive();
                     while (matcher.find()) {
                         int index = Integer.parseInt(matcher.group(1));
-                        System.out.println(index);
                         int newActiveTTT = ticTacToe.setTile(index, field.getActivePlayer());
                         if (newActiveTTT < 0) {
                             channel.sendMessage(field.getActivePlayer().getUser().getAsMention() + " please select a field that hasn't been set!").queue();

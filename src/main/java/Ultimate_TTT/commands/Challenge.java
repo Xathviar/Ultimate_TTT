@@ -9,10 +9,18 @@ import net.dv8tion.jda.core.entities.User;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
+/**
+ * Handles the .ttt <@Player> Command, which challenges a player
+ */
 public class Challenge extends ListenerAdapter {
-    PlayField field;
-    char prefix;
+    private final PlayField field;
+    private final char prefix;
 
+    /**
+     * Constructor for Challenge
+     * @param field the PlayField which will be used
+     * @param prefix the prefix which will be listened to
+     */
     public Challenge(PlayField field, char prefix) {
         this.field = field;
         this.prefix = prefix;

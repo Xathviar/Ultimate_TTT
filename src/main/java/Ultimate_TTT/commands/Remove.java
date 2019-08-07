@@ -7,13 +7,18 @@ import net.dv8tion.jda.core.entities.User;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
+/**
+ * Deletes every message that wasn't send by a bot
+ */
 public class Remove extends ListenerAdapter {
-    PlayField field;
-    char prefix;
+    private final PlayField field;
 
-    public Remove(PlayField field, char prefix) {
+    /**
+     * Constructor for Remove
+     * @param field the PlayField which will be used
+     */
+    public Remove(PlayField field) {
         this.field = field;
-        this.prefix = prefix;
     }
 
     @Override
@@ -21,7 +26,6 @@ public class Remove extends ListenerAdapter {
         User author = event.getAuthor();                //The user that sent the message
         Message message = event.getMessage();           //The message that was received.
         MessageChannel channel = event.getChannel();    //This is the MessageChannel that the message was sent to.
-        String msg = message.getContentDisplay();       //get msg as String
         boolean isBot = author.isBot(); //Determines whether user is a bot or not
 
         if (!isBot && field.isActiveGame() && channel.equals(field.getChannel())) {
