@@ -43,6 +43,7 @@ public class Handler {
                 .addEventListener(new ReadyListener())
                 .addEventListener(new Challenge(playField, prefix))
                 .addEventListener(new TileCommand(playField, prefix))
+                .addEventListener(new Stop(playField, prefix))
                 .addEventListener(new GetMessage(playField))
                 .addEventListener(new View(playField, prefix))
                 .addEventListener(new Remove(playField))

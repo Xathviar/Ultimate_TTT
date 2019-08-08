@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0543c62e-09e7-4513-becd-5e7c2fd29e86" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/xathviar/Ultimate_TTT/commands/Stop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/xathviar/Ultimate_TTT/PlayField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/xathviar/Ultimate_TTT/PlayField.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +35,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="758" />
-    <option name="y" value="834" />
-    <option name="width" value="1310" />
-    <option name="height" value="992" />
-  </component>
+  <component name="ProjectId" id="1P9XGyolcQNY6CAb65bSFMn6mVU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -121,6 +119,7 @@
       <workItem from="1557945614504" duration="5491000" />
       <workItem from="1557984649927" duration="708000" />
       <workItem from="1558069781602" duration="1598000" />
+      <workItem from="1565287211325" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/Xathviar/Ultimate_TTT&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/Ultimate_TTT/TicTacToe.java">
       <created>1565214460847</created>
@@ -136,17 +135,36 @@
       <option name="project" value="LOCAL" />
       <updated>1565215054646</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changed pom.xml to build fat jar">
+      <created>1565215596013</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565215596013</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Stable Release v1" />
     <MESSAGE value="Merge branch 'master' of https://github.com/Xathviar/Ultimate_TTT&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/Ultimate_TTT/TicTacToe.java" />
     <MESSAGE value="Changed Directory Path" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Directory Path" />
+    <MESSAGE value="Changed pom.xml to build fat jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed pom.xml to build fat jar" />
   </component>
   <component name="masterDetails">
     <states>

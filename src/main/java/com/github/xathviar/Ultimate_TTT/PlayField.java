@@ -160,7 +160,13 @@ public class PlayField {
                             && field.get(6).winner.getTile() == player.getTile())) {
                 channel.sendMessage(player.getUser().getAsMention() + " has won the game!").queue();
                 setActiveGame(false);
+                setMessage(null);
+                setTurn(null);
             }
         }
+    }
+
+    public Player getPlayer2() {
+        return player2;
     }
 }
