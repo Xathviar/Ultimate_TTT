@@ -34,7 +34,7 @@ public class Handler {
      */
     private Handler(String token) throws LoginException, InterruptedException {
         PlayField playField = new PlayField();
-        char prefix = '.';
+        char prefix = ',';
         JDA jda = new JDABuilder(token)
                 .setStatus(OnlineStatus.ONLINE)
                 .setGame(net.dv8tion.jda.core.entities.Game.playing("Ultimate TicTacToe"))

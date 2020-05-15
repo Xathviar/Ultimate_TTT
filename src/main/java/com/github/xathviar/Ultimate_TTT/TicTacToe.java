@@ -9,6 +9,8 @@ public class TicTacToe {
 
     private boolean active = false;
 
+    private boolean finished = false;
+
     /**
      * Constructor for the 3x3 TTT Field
      */
@@ -76,18 +78,23 @@ public class TicTacToe {
                     (field[0] == player.getTile() && field[4] == player.getTile() && field[8] == player.getTile()) ||
                     (field[2] == player.getTile() && field[4] == player.getTile() && field[6] == player.getTile())) {
                 winner = player;
+                for (int j = 0; j < field.length; j++) {
+                    field[j] = player.getTile();
+                }
                 break;
             }
         }
+        setActive(false);
     }
 
     String getRowToString(int index, boolean containsActive) {
         if (containsActive) {
             if (isActive()) {
-                return field[index * 3].toString() + field[index * 3 + 1].toString() + field[index * 3 + 2].toString();
-            } else {
-                return field[index * 3].toBlankString() + field[index * 3 + 1].toBlankString() + field[index * 3 + 2].toBlankString();
+                if (!finished) {
+                    return field[index * 3].toString() + field[index * 3 + 1].toString() + field[index * 3 + 2].toString();
+                }
             }
+            return field[index * 3].toBlankString() + field[index * 3 + 1].toBlankString() + field[index * 3 + 2].toBlankString();
         }
         return field[index * 3].toString() + field[index * 3 + 1].toString() + field[index * 3 + 2].toString();
     }

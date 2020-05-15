@@ -18,7 +18,8 @@ public class Challenge extends ListenerAdapter {
 
     /**
      * Constructor for Challenge
-     * @param field the PlayField which will be used
+     *
+     * @param field  the PlayField which will be used
      * @param prefix the prefix which will be listened to
      */
     public Challenge(PlayField field, char prefix) {
@@ -35,7 +36,7 @@ public class Challenge extends ListenerAdapter {
         boolean isBot = author.isBot(); //Determines whether user is a bot or not
 
         if (!isBot && msg.startsWith(prefix + "ttt")) {
-            if (message.getMentionedUsers().size() != 0)  {
+            if (message.getMentionedUsers().size() != 0) {
                 if (field.isActiveGame()) {
                     channel.sendMessage("There is already a running game!").queue();
                 } else {
@@ -46,11 +47,11 @@ public class Challenge extends ListenerAdapter {
                     field.setActivePlayer(field.getPlayer1());
                     channel.sendMessage("Successfully started the Game.").queue();
                     field.printField();
-                    channel.sendMessage("With \'.[1-9]\' you can select the Tic-Tac-Toe you want to play in. If you " +
-                            "selected it you can then select \'.[1-9]\' to place it there.").queue();
+                    channel.sendMessage("With '" + prefix + "[1-9]' you can select the Tic-Tac-Toe you want to play in. If you " +
+                            "selected it you can then select '" + prefix + "[1-9]' to place it there.").queue();
                     channel.sendMessage("`Current turn: `" + field.getActivePlayer().getUser().getAsMention()).queue();
                 }
-            }else {
+            } else {
                 channel.sendMessage("Please mention someone!").queue();
             }
         }
